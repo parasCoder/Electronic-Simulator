@@ -14,7 +14,7 @@ public class SevenSegmentDecoder {
 	private boolean d2 ;
 	private boolean d3 ;
 	
-	public SevenSegmentDecoder(boolean d0, boolean d1, boolean d2 , boolean d3) {
+	public SevenSegmentDecoder(boolean d3, boolean d2, boolean d1 , boolean d0) {
 		
 		this.d0 = d0 ;
 		this.d1 = d1 ;
@@ -72,37 +72,37 @@ public class SevenSegmentDecoder {
 	
 	public boolean getA() {
 		
-		return (!d3 && (!d2 || !d0) && (d2 || d0) && !d1 ) ;
+		return !(!d3 && (!d2 || !d0) && (d2 || d0) && !d1 ) ;
 	}
 	
 	public boolean getB() {
 		
-		return (d2 && (!d1 || !d0) && (d1 || d0)) ;
+		return !(d2 && (!d1 || !d0) && (d1 || d0)) ;
 	}
 	
 	public boolean getC() {
 		
-		return (!d2 && d1 && !d0) ;
+		return !(!d2 && d1 && !d0) ;
 	}
 	
 	public boolean getD() {
 		
-		return (!d3 && (!d2 || d1 || !d0) && (d2 || !d1) && (d2 || d0) && (!d1 || d0) ) ;
+		return !(!d3 && (!d2 || d1 || !d0) && (d2 || !d1) && (d2 || d0) && (!d1 || d0) ) ;
 	}
 	
 	public boolean getE() {
 		
-		return ( (d2 || d0) && (!d1 || d0) ) ;
+		return !( (d2 || d0) && (!d1 || d0) ) ;
 	}
 	
 	public boolean getF() {
 		
-		return (!d3 && (!d2 || d1) && (!d2 || d0) && (d1 || d0) ) ;
+		return !(!d3 && (!d2 || d1) && (!d2 || d0) && (d1 || d0) ) ;
 	}
 	
 	public boolean getG() {
 		
-		return (!d3 && (!d2 || d1) && (!d2 || d0) && (d2 || !d1) ) ;
+		return !(!d3 && (!d2 || d1) && (!d2 || d0) && (d2 || !d1) ) ;
 	}
 
 }
